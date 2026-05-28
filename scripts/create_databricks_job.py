@@ -132,13 +132,13 @@ def build_job_config(workspace_path, alert_email):
                 "base_parameters": {"catalog_name": "zomato_analytics", "env": "dev"},
             },
             "timeout_seconds": 1800,
-            "max_retries": 1,
+            "max_retries": 0,
         },        
     ]
 
     job_config = {
         "name": JOB_NAME,
-        "description": "End-to-end pipeline: DDL → Data Gen → Bronze → Silver → Gold → Dashboard",
+        "description": "End-to-end pipeline: DDL → Data Gen → Bronze → Silver → Gold → Dashboard → Validation",
         "tags": {
             "project": "zomato-analytics",
             "team": "data-engineering",
@@ -167,7 +167,7 @@ def main():
     parser.add_argument("--host", required=True, help="Databricks workspace URL")
     parser.add_argument("--token", required=True, help="Databricks PAT")
     parser.add_argument("--workspace-path", required=True, help="Notebook workspace path")
-    parser.add_argument("--alert-email", default="dataarchitectstudio@gmail.com", help="Alert email")
+    parser.add_argument("--alert-email", default="ateetjss@gmail.com", help="Alert email")
     args = parser.parse_args()
 
     host = args.host.rstrip("/")

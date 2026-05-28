@@ -124,8 +124,8 @@
   },
   "email_notifications": {
     "on_start": [],
-    "on_success": ["dataarchitectstudio@gmail.com","ateetjss@gmail.com"],
-    "on_failure": ["dataarchitectstudio@gmail.com","ateetjss@gmail.com"],
+    "on_success": ["ateetjss@gmail.com"],
+    "on_failure": ["ateetjss@gmail.com"],
     "no_alert_for_skipped_runs": true
   },
   "max_concurrent_runs": 1,
