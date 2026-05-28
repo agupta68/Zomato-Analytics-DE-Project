@@ -123,6 +123,17 @@ def build_job_config(workspace_path, alert_email):
             "timeout_seconds": 1800,
             "max_retries": 1,
         },
+        {
+            "task_key": "pipeline_validation",
+            "description": "Pipeline Validation",
+            "depends_on": [{"task_key": "dashboard_refresh"}],
+            "notebook_task": {
+                "notebook_path": f"{wp}/validation/06_pipeline_validation",
+                "base_parameters": {"catalog_name": "zomato_analytics", "env": "dev"},
+            },
+            "timeout_seconds": 1800,
+            "max_retries": 1,
+        },        
     ]
 
     job_config = {

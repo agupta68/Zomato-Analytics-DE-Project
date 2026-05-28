@@ -36,6 +36,7 @@ def main():
         f"{args.workspace_path}/gold/03_gold_aggregation",
         f"{args.workspace_path}/dashboard/04_analytics_dashboard",
         f"{args.workspace_path}/orchestration/05_run_pipeline",
+        f"{args.workspace_path}/validation/06_pipeline_validation",
     ]
 
     print("=" * 50)
